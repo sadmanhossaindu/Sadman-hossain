@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sadman Hossain — Education | Communication | Film & Design for Social Impact</title>
+  <meta name="description" content="Portfolio of Sadman Hossain — Educator, Development Practitioner, and Communication Specialist using storytelling and design for social impact." />
+  <meta name="author" content="Sadman Hossain" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --bg: #0b1016; /* deep slate */
+      --card: #0f1622;
+      --muted: #9fb3c8;
+      --text: #e7eff7;
+      --brand: #7dd3fc; /* sky */
+      --brand-2: #34d399; /* green */
+      --ring: rgba(125,211,252,.4);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,'Noto Sans',sans-serif;background:linear-gradient(180deg,var(--bg),#0a0f15 60%,#091016);color:var(--text);}
+    a{color:inherit}
+    .container{max-width:1152px;margin-inline:auto;padding:0 20px}
+    /* Header */
+    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(160%) blur(10px);background:rgba(9,16,22,.75);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center;font-weight:700;letter-spacing:.2px}
+    .brand-logo{width:36px;height:36px;border-radius:10px;background:conic-gradient(from 90deg,var(--brand),var(--brand-2),#a78bfa,#60a5fa,var(--brand));box-shadow:0 0 40px rgba(125,211,252,.25)}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{display:inline-block;padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--muted)}
+    nav a:hover,nav a:focus{outline:none;color:var(--text);background:rgba(255,255,255,.06)}
+    .cta{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#001115;padding:10px 14px;border-radius:10px;font-weight:700;box-shadow:0 6px 20px rgba(52,211,153,.25);}
+    /* Hero */
+    .hero{padding:72px 0 48px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px}
+    .title{font-size:clamp(28px,4.2vw,56px);line-height:1.05;margin:0 0 12px}
+    .subtitle{font-size:clamp(16px,1.6vw,20px);color:var(--muted)}
+    .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .tag{border:1px solid rgba(125,211,252,.35);color:#c9f1ff;padding:6px 10px;border-radius:999px;font-size:13px}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);padding:18px;border-radius:16px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .metric{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:16px}
+    .metric h4{margin:0;font-size:28px}
+    .metric p{margin:4px 0 0;color:var(--muted);font-size:14px}
+    /* Sections */
+    section{padding:64px 0;border-top:1px solid rgba(255,255,255,.06)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:24px}
+    .section-head h2{margin:0;font-size:clamp(22px,2.4vw,32px)}
+    .section-head p{color:var(--muted);max-width:720px}
+    .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{grid-column:span 6;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.cards .card{grid-column:span 12}}
+    .card-media{aspect-ratio:16/9;background:#08121a url('https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?q=80&w=1200&auto=format&fit=crop') center/cover}
+    .card-body{padding:18px}
+    .eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9ccacf}
+    .card h3{margin:6px 0 6px;font-size:20px}
+    .card p{margin:0;color:var(--muted)}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .chip{font-size:12px;padding:6px 10px;border-radius:999px;background:rgba(125,211,252,.12);border:1px solid rgba(125,211,252,.28)}
+    .row{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:14px}
+    .btn{display:inline-block;padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);text-decoration:none}
+    .btn:hover{background:rgba(255,255,255,.1)}
+    .filter{display:flex;gap:10px;flex-wrap:wrap}
+    .filter button{all:unset;cursor:pointer;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.12);color:var(--muted)}
+    .filter button.active{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#001115;border:none}
+    /* Timeline */
+    .timeline{display:grid;gap:18px}
+    .tl-item{display:grid;grid-template-columns:140px 1fr;gap:16px}
+    .tl-item time{color:#a7bed3}
+    .tl-card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:14px}
+    .tl-card h4{margin:0 0 6px}
+    .tl-card p{margin:0;color:var(--muted)}
+    /* Footer */
+    footer{padding:48px 0;border-top:1px solid rgba(255,255,255,.06)}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px}
+    @media (max-width:800px){.footer-grid{grid-template-columns:1fr}}
+    .muted{color:var(--muted)}
+    /* Accessibility */
+    :focus-visible{outline:2px solid var(--brand);outline-offset:2px;box-shadow:0 0 0 8px var(--ring)}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sadman Hossain",
+    "jobTitle": "Educator, Development Practitioner, Communication Specialist",
+    "address": {"@type":"PostalAddress","addressLocality":"Dhaka","addressCountry":"BD"},
+    "email": "mailto:sadmantfpdu@gmail.com",
+    "telephone": "+8801303064510",
+    "url": "https://example.com",
+    "sameAs": [
+      "https://linkedin.com/in/sadman-hossain-tfp"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="Go to top">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span>Sadman Hossain</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#film">Film</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact" class="cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="intro-heading">
+      <div>
+        <h1 id="intro-heading" class="title">Education · Communication · Film & Design for Social Impact</h1>
+        <p class="subtitle">Educator and development communicator using storytelling, data, and design to improve learning outcomes and community wellbeing.</p>
+        <div class="tags" role="list" aria-label="Key capabilities">
+          <span class="tag" role="listitem">Teach For Bangladesh</span>
+          <span class="tag" role="listitem">Digital Literacy Programs</span>
+          <span class="tag" role="listitem">Safeguarding & GBV Awareness</span>
+          <span class="tag" role="listitem">Media & News Production</span>
+          <span class="tag" role="listitem">Cinematography & Editing</span>
+        </div>
+        <div class="row" style="margin-top:22px">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Work with me</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Quick metrics">
+        <div class="grid-2">
+          <div class="metric">
+            <h4>320+</h4>
+            <p>Students taught (Math, Science, ICT)</p>
+          </div>
+          <div class="metric">
+            <h4>1,000+</h4>
+            <p>Community stakeholders engaged (AWAJ)</p>
+          </div>
+          <div class="metric">
+            <h4>100K+</h4>
+            <p>Digital audience reached (campaigns)</p>
+          </div>
+          <div class="metric">
+            <h4>DIFF</h4>
+            <p>Short film selections (Cinematography)</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="section-head">
+        <h2 id="about-heading">About Me</h2>
+        <p>I connect classroom practice, community engagement, and visual storytelling. As a Teach For Bangladesh Fellow, I design inclusive lessons and community projects; as a media professional and filmmaker, I transform human stories into clear, compelling communication for social impact.</p>
+      </div>
+      <div class="cards">
+        <article class="card" style="grid-column:span 7">
+          <div class="card-body">
+            <div class="eyebrow">Profile</div>
+            <h3>Educator · Development Practitioner · Communication Specialist</h3>
+            <p>Currently based in Dhaka. Trained in DRR, Psychological First Aid, and SEL. Comfortable leading data-driven instruction, household visits, and stakeholder coordination. Experienced in newsroom production, digital content strategy, and film production workflows.</p>
+            <div class="chips">
+              <span class="chip">SEL & Inquiry-based Learning</span>
+              <span class="chip">Project Design & M&E</span>
+              <span class="chip">Scriptwriting & Editing</span>
+              <span class="chip">Community Facilitation</span>
+            </div>
+          </div>
+        </article>
+        <aside class="card" style="grid-column:span 5">
+          <div class="card-body">
+            <div class="eyebrow">At a glance</div>
+            <h3>Core Tools</h3>
+            <p class="muted">Google Workspace, MS Excel, WordPress, Premiere Pro, DaVinci Resolve, DSLR/Mirrorless camera systems.</p>
+            <h3 style="margin-top:12px">Languages</h3>
+            <p class="muted">Bengali (native), English (fluent)</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PROJECTS / EDUCATION & DEVELOPMENT -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="section-head">
+        <h2 id="projects-heading">Projects — Education & Development Communication</h2>
+        <p>Selected initiatives that improved learning outcomes, built safeguarding awareness, and scaled communication impact.</p>
+      </div>
+
+      <div class="row" style="justify-content:space-between;margin-bottom:14px">
+        <div class="filter" role="tablist" aria-label="Filter projects">
+          <button class="active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button data-filter="education" role="tab">Education</button>
+          <button data-filter="communication" role="tab">Communication</button>
+          <button data-filter="community" role="tab">Community</button>
+        </div>
+        <a class="btn" href="#experience">See Experience</a>
+      </div>
+
+      <div class="cards" id="projectGrid">
+        <!-- Digital Bridge -->
+        <article class="card" data-tags="education community">
+          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1200&auto=format&fit=crop')"></div>
+          <div class="card-body">
+            <div class="eyebrow">Teach For Bangladesh</div>
+            <h3>Digital Bridge: Learn & Lead</h3>
+            <p>Designed and led a digital literacy program integrating leadership workshops and technology-enabled learning for 100+ underserved students.</p>
+            <div class="chips">
+              <span class="chip">Education</span><span class="chip">Digital Skills</span><span class="chip">Leadership</span>
+            </div>
+            <div class="row">
+              <span class="muted">2023–Present</span>
+            </div>
+          </div>
+        </article>
+        <!-- AWAJ -->
+        <article class="card" data-tags="community communication">
+          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1519681393-ea00d3d265f5?q=80&w=1200&auto=format&fit=crop')"></div>
+          <div class="card-body">
+            <div class="eyebrow">Teach For Bangladesh</div>
+            <h3>AWAJ — Aware, Watchful, Active, Just</h3>
+            <p>Safeguarding and GBV awareness program engaging 350+ students and 1,000+ community stakeholders through advocacy sessions and campaigns.</p>
+            <div class="chips">
+              <span class="chip">Safeguarding</span><span class="chip">GBV Awareness</span><span class="chip">Community</span>
+            </div>
+            <div class="row">
+              <span class="muted">2023–Present</span>
+            </div>
+          </div>
+        </article>
+        <!-- Ek Takar Khobor -->
+        <article class="card" data-tags="communication">
+          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop')"></div>
+          <div class="card-body">
+            <div class="eyebrow">Digital Content</div>
+            <h3>Ek Takar Khobor — Editorial & Campaigns</h3>
+            <p>Directed editorial planning and strategic communication reaching 100K+ viewers; coordinated trainings and cross-functional content delivery.</p>
+            <div class="chips">
+              <span class="chip">Content Strategy</span><span class="chip">Editorial</span><span class="chip">Training</span>
+            </div>
+            <div class="row">
+              <span class="muted">2023</span>
+            </div>
+          </div>
+        </article>
+        <!-- ATN News -->
+        <article class="card" data-tags="communication">
+          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1517502884422-41eaead166d4?q=80&w=1200&auto=format&fit=crop')"></div>
+          <div class="card-body">
+            <div class="eyebrow">Broadcast Journalism</div>
+            <h3>ATN News — Field & Feature Reporting</h3>
+            <p>Produced 100+ news packages, 60+ live reports, and 200+ OOV stories with a focus on underrepresented communities.</p>
+            <div class="chips">
+              <span class="chip">Reporting</span><span class="chip">Scriptwriting</span><span class="chip">Visual Storytelling</span>
+            </div>
+            <div class="row">
+              <span class="muted">2021–2023</span>
+            </div>
+          </div>
+        </article>
+        <!-- Mayer Jonno -->
+        <article class="card" data-tags="communication community">
+          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=1200&auto=format&fit=crop')"></div>
+          <div class="card-body">
+            <div class="eyebrow">TV Program</div>
+            <h3>Mayer Jonno — Remote Healthcare</h3>
+            <p>Production and post-production for a women-focused health program; aligned educational content with audience needs.</p>
+            <div class="chips">
+              <span class="chip">Production</span><span class="chip">Editing</span><span class="chip">Health Communication</span>
+            </div>
+            <div class="row">
+              <span class="muted">2023</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FILM SECTION -->
+    <section id="film" aria-labelledby="film-heading">
+      <div class="section-head">
+        <h2 id="film-heading">Film & Visual Storytelling</h2>
+        <p>Selected works as director and cinematographer. Themes include identity, resilience, and community narratives. Screenings include the Dhaka International Film Festival (DIFF).</p>
+      </div>
+      <div class="cards">
+        <article class="card" style="grid-column:span 7">
+          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1200&auto=format&fit=crop')"></div>
+          <div class="card-body">
+            <div class="eyebrow">Director</div>
+            <h3>“Unnamed” — Short Film</h3>
+            <p>A psychological short exploring self-identity and societal pressure. Graduating film (University of Dhaka) — top evaluated piece.</p>
+            <div class="chips">
+              <span class="chip">Direction</span><span class="chip">Screenwriting</span><span class="chip">Editing</span>
+            </div>
+          </div>
+        </article>
+        <article class="card" style="grid-column:span 5">
+          <div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1542623024-a0c7877a0638?q=80&w=1200&auto=format&fit=crop')"></div>
+          <div class="card-body">
+            <div class="eyebrow">Cinematographer</div>
+            <h3>Festival Selections — DIFF</h3>
+            <p>Collaborated as DoP on multiple shorts selected for Dhaka International Film Festival; responsible for visual language and camera direction.</p>
+            <div class="chips">
+              <span class="chip">Cinematography</span><span class="chip">Lighting</span><span class="chip">Color</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE / TIMELINE -->
+    <section id="experience" aria-labelledby="exp-heading">
+      <div class="section-head">
+        <h2 id="exp-heading">Experience — Selected Roles</h2>
+        <p>Highlights from teaching, media, and leadership roles. Full CV available on request.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <time>2023–Present</time>
+          <div class="tl-card">
+            <h4>Fellow — Teach For Bangladesh</h4>
+            <p>Inclusive lesson design (Math, Science, ICT); data dashboards; Problem Solving Club; DRR, PFA & SEL integrations; community-parent engagement.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <time>2023</time>
+          <div class="tl-card">
+            <h4>Senior Executive (Digital Content) — Ek Takar Khobor</h4>
+            <p>Editorial planning and campaign strategy; 100K+ reach; staff trainings and content operations.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <time>2021–2023</time>
+          <div class="tl-card">
+            <h4>Staff Reporter — ATN News</h4>
+            <p>100+ packages, 60+ live reports, 200+ OOV; public interest and underrepresented stories; deadline-driven production.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="section-head">
+        <h2 id="contact-heading">Contact</h2>
+        <p>Open to roles in education innovation, development communication, and creative production. Let’s collaborate.</p>
+      </div>
+      <div class="cards">
+        <div class="card" style="grid-column:span 7">
+          <div class="card-body">
+            <div class="eyebrow">Reach me</div>
+            <h3>Email & Phone</h3>
+            <p><a href="mailto:sadmantfpdu@gmail.com">sadmantfpdu@gmail.com</a> · <a href="tel:+8801303064510">+880 1303064510</a></p>
+            <div class="chips">
+              <a class="chip" href="https://linkedin.com/in/sadman-hossain-tfp" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="chip" href="#" aria-disabled="true" title="Add your portfolio link">Portfolio</a>
+              <a class="chip" href="#" aria-disabled="true" title="Add your Git/Drive/Showreel link">Showreel</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="grid-column:span 5">
+          <div class="card-body">
+            <div class="eyebrow">Location</div>
+            <h3>Dhaka Cantonment, Dhaka, Bangladesh</h3>
+            <p class="muted">Available for onsite roles in Bangladesh and remote collaboration worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Sadman Hossain</strong>
+        <p class="muted">Education | Communication | Film & Design for Social Impact</p>
+      </div>
+      <div>
+        <p class="muted">© <span id="y"></span> All rights reserved.</p>
+      </div>
+      <div style="text-align:right">
+        <a class="muted" href="#home">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Simple filter for projects
+    const buttons = document.querySelectorAll('.filter button');
+    const cards = document.querySelectorAll('#projectGrid .card');
+    buttons.forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        buttons.forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false')});
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected','true');
+        const f = btn.dataset.filter;
+        cards.forEach(c=>{
+          const tags = (c.dataset.tags||'').split(' ');
+          const show = f==='all' || tags.includes(f);
+          c.style.display = show? 'block':'none';
+        });
+      })
+    })
+
+    // Reveal on scroll (progressive enhancement)
+    const reveal = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.animate([
+            {opacity:0, transform:'translateY(14px)'},
+            {opacity:1, transform:'translateY(0)'}
+          ],{duration:600, easing:'cubic-bezier(.2,.7,.2,1)', fill:'forwards'});
+          reveal.unobserve(e.target);
+        }
+      })
+    },{threshold:.1});
+    document.querySelectorAll('.card,.metric,.section-head').forEach(el=>reveal.observe(el));
+  </script>
+</body>
+</html>
